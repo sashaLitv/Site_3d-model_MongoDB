@@ -1,0 +1,38 @@
+footer {
+    border-top: 5px solid white;
+    padding: 10px;
+    background-color: var(--background-color);
+    padding: 5.86vh 4.17vw;
+}
+
+footer .footer-container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+footer  textarea {
+    width: 27.78vw;
+    height: 15.63vh;
+    background-color: var(--background-color-grey);
+    border: none;
+    border-radius: 20px;
+    padding: 1.25em;
+    margin: 1.25em auto;
+    resize: none;
+    min-width: 350px;
+}
+
+footer .contacts-section{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+footer .social-icons{
+    font-size: var(--font-size-medium);
+}
+
+  
+
+

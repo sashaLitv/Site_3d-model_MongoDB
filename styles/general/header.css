@@ -1,0 +1,9 @@
+header{
+    padding: 3.91vh 2.78vw;
+}
+header .nav-container{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 4.2vw;
+}
