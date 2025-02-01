@@ -22,6 +22,11 @@ footer  textarea {
     margin: 1.25em auto;
     resize: none;
     min-width: 350px;
+    color: var(--font-color-black);
+}
+footer textarea:focus {
+    outline: none;
+    box-shadow: inset 0 0 2px 3px var(--color-green);
 }
 
 footer .contacts-section{

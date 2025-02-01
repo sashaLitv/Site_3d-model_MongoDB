@@ -11,11 +11,13 @@ main .nav-container{
     gap: 4.2vw;
 }
 
+
 .tasks{
     display: flex;
     justify-content: space-between;
     margin: 4.2vw 5.85vh;
     flex-wrap: wrap;
+    color: var(--font-color-black)
 }
 .to-do-list, .completed-list{
     background-color: var(--background-color-grey);
@@ -23,10 +25,9 @@ main .nav-container{
     width: 42vw;
     border-radius: 20px;
     overflow-y: scroll;
-    overflow-x: hidden;
-
     padding: 4.8vh 3.47vw;
 }
+
 .to-do-list h4{
     color: black;
     filter: drop-shadow(0px 8px 8px black);
@@ -40,12 +41,27 @@ main .nav-container{
     font-size: var(--font-size-medium);
     margin-bottom: 0.75em;
 }
-
-.tasks-content::-webkit-scrollbar{
+.to-do-list::-webkit-scrollbar, .completed-list::-webkit-scrollbar{
     width: 8px;
-    padding-right: 5px;
 }
-.tasks-content::-webkit-scrollbar-thumb{
+.to-do-list::-webkit-scrollbar-thumb, .completed-list::-webkit-scrollbar-thumb{
     background-color: var(--color-green);
     border-radius: 10px;
+}
+
+#list-content{
+    list-style: none;
+    padding: 0;
+}
+#list-content li {
+    background-color: white;
+    margin: 5px;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#add-button{
+    position: relative;
+    bottom: 2%;
+    right: 2%;
 }
