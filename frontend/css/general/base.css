@@ -2,25 +2,34 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root{
-    --background-color: #0E1819;
+    --background-color: #0c1f1f;
     --background-color-grey: #E7E7E7;
 
     --font-color-white: white;
     --font-color-black: black;
     --font-opacity: 0.5;
 
-    --color-green: #5e7667;
+    --color-dirty-green: #5e7667;
+    --color-green: #183f3f;
 
     --font-size-small: 1.5rem;
     --font-size-medium: 2.5rem;
 }
 
 body{
-    background: radial-gradient(circle, #121e1f, #000000); 
+    background: radial-gradient(circle, var(--background-color), #000000); 
     color: var(--font-color-white);
     font-family: 'Barlow-ExtraLight', sans-serif;
     font-size: var(--font-size-small);
     font-weight: 200;
+}
+
+*::-webkit-scrollbar{
+    width: 8px;
+}
+*::-webkit-scrollbar-thumb{
+    background-color: var(--color-green);
+    border-radius: 10px;
 }
 
 h3{
@@ -35,8 +44,52 @@ h3{
     font-size: 3.5rem;
     transition: color 0.3s ease-in-out, transform 0.3s ease-in-out; 
 }
-
 .nav-link:hover i {
-    color: var(--color-green); 
+    color: var(--color-dirty-green); 
     transform: scale(1.1);
+}
+
+.hidden {
+    display: none;
+}
+
+.modal{
+    position: absolute;
+    z-index: 10;
+    height: 100vh;
+    width: 96%;
+    background-color: var(--background-color-grey);
+    border: 3px solid var(--background-color);
+    border-radius: 8px;
+    padding: 30px;
+    margin: 0px 30px;
+}
+.modal-content{
+    color: var(--font-color-black);
+}
+
+button[type="submit"],
+button[type="button"] {
+    padding: 10px 20px;
+    min-width: 300px;
+    width: 60%;
+    border-radius: 0.5rem;
+    margin: 0 auto;
+    transition: background-color 0.3s ease;
+}
+button[type="submit"] {
+    background-color: var(--color-green); 
+    color: var(--font-color-white);
+    border: 1px solid var(--font-color-white);
+}
+button[type="submit"]:hover {
+    background-color: var(--background-color-grey); 
+}
+button[type="button"] {
+    background-color: var(--background-color-grey);
+    color: var(--font-color-white);
+    border: 1px solid var(--font-color-white);
+}
+button[type="button"]:hover {
+    background-color: var(--color-green); 
 }

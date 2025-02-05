@@ -1,0 +1,65 @@
+#open-modal {
+    font-size: calc(var(--font-size-medium) * 1.2);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 20px; 
+}
+.modal{
+    position: absolute;
+    z-index: 10;
+    height: 100vh;
+    width: 96%;
+    background-color: var(--background-color-grey);
+    border: 3px solid var(--background-color);
+    border-radius: 1rem;
+    padding: 30px;
+    margin: 0px 30px;
+}
+.modal-content{
+    color: var(--font-color-black);
+}
+
+#taskForm {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; 
+    padding: 20px;
+    margin-top: 20px;
+    background-color: var(--background-color-grey);
+    border-radius: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+#taskForm label {
+    font-weight: 400;
+    color: var(--font-color-black);
+    margin-bottom: 5px; 
+}
+
+#taskForm input[type="text"],
+#taskForm input[type="date"],
+#taskForm select,
+#taskForm textarea {
+    padding: 10px;
+    font-weight: 200;
+    border: 1px solid #ccc;
+    border-radius: 0.25rem;
+    transition: border-color 0.3s ease;
+}
+
+#taskForm input[type="text"]:focus,
+#taskForm input[type="date"]:focus,
+#taskForm select:focus,
+#taskForm textarea:focus {
+    border-color: var(--);
+    outline: none;
+}
+
+#taskForm textarea {
+    height: 100px;
+    resize: none;
+}
+
+
+

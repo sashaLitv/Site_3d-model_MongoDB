@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plan it</title>
+    <link rel="stylesheet" href="./css/main-page/main-style.css">
+</head>
+<body>
+    <div id="loader-container">
+      <div class="loader">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+
+  <header>
+    <nav class="nav-container">
+      <a href="#" class="nav-link">
+        <i id="login-icon" class="fa-solid fa-door-closed"></i>
+      </a>
+      <a href="#" class="nav-link">
+        <i class="fa-solid fa-bars"></i>
+      </a>
+    </nav>
+  </header>
+  
+  <section id="auth-modal" class="modal hidden">
+    <div class="modal-content">
+      <span id="close-modal">&times;</span>
+      <div class="auth-links">
+        <h3 class="auth-option" data-text="Log In">Log In</h3>
+        <h3 class="auth-option" data-text="Sign In">Sign In</h3>
+      </div>
+      <form id="auth-form">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" required>
+
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required>
+
+        <div id="add-field" class="add-field hidden">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name">
+
+          <label for="birthday">Birthday</label>
+          <input type="date" id="birthday" name="birthday">
+        </div>
+        <button id="auth-button" type="submit">Log in</button>
+    </form>
+    </div>
+  </section>
+
+  <main>
+    <div id="model-container"></div>
+    <p>Take a seat to start planning.</p>
+  </main>
+
+  <footer>
+      <div class="footer-container">
+          <div class="feedback-section">
+              <h3>Your Feedback Matters</h3>
+              <textarea placeholder="Leave your feedback, please"></textarea>
+            </div>
+            <div class="contacts-section">
+              <h3>Contacts</h3>
+              <p>Telephone: +380440000000</p>
+              <p>Email: contact@website.com</p>
+              <p>Working Hours: Mon-Fri, 9 AM - 6 PM</p>
+              <div class="social-icons">
+                <i class="fa-brands fa-telegram"></i>
+                <i class="fa-brands fa-facebook"></i>
+              </div>
+            </div>
+      </div>
+  </footer>
+
+  <script type="module" src="../js/3dModelInteraction.js.js"></script>
+  <script type="module" src="../js/preloader.js"></script>
+  <script type="module" src="../js/auth.js"></script>
+</body>
+</html>

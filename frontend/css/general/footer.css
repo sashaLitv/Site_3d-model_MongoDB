@@ -1,5 +1,5 @@
 footer {
-    border-top: 5px solid white;
+    border-top: 5px solid var(--font-color-white);
     padding: 10px;
     background-color: var(--background-color);
     padding: 5.86vh 4.17vw;
@@ -13,8 +13,8 @@ footer .footer-container{
 }
 
 footer  textarea {
-    width: 27.78vw;
-    height: 15.63vh;
+    width: 35vw;
+    height: 25vh;
     background-color: var(--background-color-grey);
     border: none;
     border-radius: 20px;
@@ -23,10 +23,11 @@ footer  textarea {
     resize: none;
     min-width: 350px;
     color: var(--font-color-black);
+    overflow-y: hidden;
 }
 footer textarea:focus {
     outline: none;
-    box-shadow: inset 0 0 2px 3px var(--color-green);
+    box-shadow: inset 0 0 2px 3px var(--color-dirty-green);
 }
 
 footer .contacts-section{

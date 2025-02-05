@@ -11,6 +11,17 @@ main .nav-container{
     gap: 4.2vw;
 }
 
+.date-picker-container #due_date {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+#planning-day{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: calc(var(--font-size-medium) * 0.8);
+}
 
 .tasks{
     display: flex;
@@ -41,19 +52,7 @@ main .nav-container{
     font-size: var(--font-size-medium);
     margin-bottom: 0.75em;
 }
-.to-do-list::-webkit-scrollbar, .completed-list::-webkit-scrollbar{
-    width: 8px;
-}
-.to-do-list::-webkit-scrollbar-thumb, .completed-list::-webkit-scrollbar-thumb{
-    background-color: var(--color-green);
-    border-radius: 10px;
-}
 
-#planning-day{
-    text-align: center;
-    text-transform: uppercase;
-    font-size: calc(var(--font-size-medium) * 0.8);
-}
 #list-content{
     list-style: none;
     padding: 0;
@@ -63,11 +62,4 @@ main .nav-container{
     margin: 10px;
     padding: 10px;
     border-radius: 20px;
-}
-#add-button {
-    font-size: calc(var(--font-size-medium) * 1.2);
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    margin: 20px; 
 }
