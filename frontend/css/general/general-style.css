@@ -3,3 +3,9 @@
 @import url("header.css");
 @import url("footer.css");
 @import url("preloader.css");
+
+@media (max-width: 768px) {
+    footer  textarea {
+        width: 70vw;
+    }
+}

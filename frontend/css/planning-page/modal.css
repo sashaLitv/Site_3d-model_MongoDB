@@ -1,23 +1,10 @@
-#open-modal {
+#create-task-modal {
     font-size: calc(var(--font-size-medium) * 1.2);
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    margin: 20px; 
-}
-.modal{
-    position: absolute;
-    z-index: 10;
-    height: 100vh;
-    width: 96%;
-    background-color: var(--background-color-grey);
-    border: 3px solid var(--background-color);
-    border-radius: 1rem;
-    padding: 30px;
-    margin: 0px 30px;
-}
-.modal-content{
-    color: var(--font-color-black);
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    margin: 20px;
+    position: sticky;
 }
 
 #taskForm {

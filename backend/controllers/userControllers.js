@@ -33,8 +33,6 @@ export const registerUser = async (req, res) => {
 export const loginUser = async (req, res) => {
     const { username, password } = req.body;
 
-    console.log("Received login request with data:", req.body);
-
     try {
         const user = await User.findOne({ username });
 
@@ -51,7 +49,7 @@ export const loginUser = async (req, res) => {
         const token = jwt.sign(
             { userId: user._id },
             process.env.JWT_SECRET,
-            { expiresIn: '1h' }
+            { expiresIn: '1d' }
         );
 
         res.json({ message: 'Login successful', token });

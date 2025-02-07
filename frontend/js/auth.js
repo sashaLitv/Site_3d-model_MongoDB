@@ -51,7 +51,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 isFirstClick = false;
             } else {
                 localStorage.removeItem("userToken");
-                console.log(localStorage.getItem("userToken"));
                 alert("You have been logged out.");
                 toggleIcon();
                 isFirstClick = true;
@@ -94,10 +93,9 @@ document.addEventListener("DOMContentLoaded", function () {
         if (name) bodyData.name = name;
         if (birthday) bodyData.date_of_birth = birthday;
     
-        const baseUrl = "http://localhost:3000";  
         const endpoint = action === "log in" 
-                        ? `${baseUrl}/api/user/login` 
-                        : `${baseUrl}/api/user/register`; 
+                        ? `/api/user/login` 
+                        : `/api/user/register`; 
     
         try {
             const response = await fetch(endpoint, {

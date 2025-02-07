@@ -11,13 +11,13 @@ main .nav-container{
     gap: 4.2vw;
 }
 
-.date-picker-container #due_date {
+.date-picker-container #due-date {
     position: absolute;
     opacity: 0;
     pointer-events: none;
 }
 
-#planning-day{
+#planning-p{
     text-align: center;
     text-transform: uppercase;
     font-size: calc(var(--font-size-medium) * 0.8);
@@ -36,7 +36,9 @@ main .nav-container{
     width: 42vw;
     border-radius: 20px;
     overflow-y: scroll;
-    padding: 4.8vh 3.47vw;
+    padding: 4vh 3vw;
+}
+.to-do-list{
     position: relative;
 }
 .to-do-list h4{
@@ -53,13 +55,51 @@ main .nav-container{
     margin-bottom: 0.75em;
 }
 
-#list-content{
+.list-content {
     list-style: none;
     padding: 0;
+    font-family: 'Barlow-ExtraLight', sans-serif;
+    font-size: var(--font-size-small);
 }
-#list-content li {
+.list-content li {
+    display: flex;
+    flex-direction: column;
     background-color: white;
-    margin: 10px;
-    padding: 10px;
     border-radius: 20px;
+    padding: 12px 16px;
+    margin: 8px 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    flex-wrap: wrap; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+.list-content li:hover {
+    transform: translateY(-1px); 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+li button {
+    background-color: transparent;
+    color: var(--font-color-black);
+    font-size: 2.5rem;
+    transition: color 0.3s, transform 0.2s ease;
+    padding: 8px;
+}
+li button:hover {
+    color: var(--color-dirty-green); 
+}
+li button i {
+    pointer-events: none;
+}
+li button i {
+    transition: transform 0.3s ease; 
+}
+li button:hover i {
+    transform: rotate(7deg); 
+}
+
+.actions{
+    display: flex; 
+    justify-content: center;
+    gap: 2rem;
+}
+

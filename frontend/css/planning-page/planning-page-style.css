@@ -1,3 +1,39 @@
 @import url("../general/general-style.css");
 @import url("main.css");
 @import url("modal.css");
+@import url("media.css");
+
+@media (max-width: 768px) {
+    main .nav-container {
+        gap: 2em;
+    }
+
+    .tasks {
+        margin: 0 3vh;
+    }
+
+    .to-do-list, .completed-list {
+        width: 90vw;
+        margin: 2vh 0;
+    }
+
+    .actions {
+        gap: 1rem;
+    }
+
+    .modal {
+        height: 80vh;
+        width: 100vw;
+        margin: 0px;
+    }
+}
+
+@media (max-width: 480px) {
+    .to-do-list, .completed-list {
+        width: 100vw;
+        margin: 1.5vh 0;
+    }
+    li button {
+        font-size: 3rem;
+    }
+}

@@ -1,4 +1,21 @@
 @import url("../general/general-style.css");
 @import url("main.css");
-@import url("media.css");
-@import url("modal.css")
+@import url("modal.css");
+
+@media (max-width: 768px) {
+    #model-container{
+        overflow: hidden; 
+    }
+    #auth-modal{
+       width: 70%;
+       height: 70vh;
+    }
+}
+
+@media (max-width: 480px) {
+    #auth-modal{
+       width: 100%;
+       height: 80vh;
+       transform: translate(-57%, -50%);
+    }
+}

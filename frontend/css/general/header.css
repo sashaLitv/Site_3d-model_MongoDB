@@ -11,3 +11,80 @@ header .nav-container{
 header .nav-link:first-child{
     font-size: 2.9rem;
 }
+
+
+#menu-toggle {
+    display: none;
+}
+
+.menu {
+    color: var(--font-color-black);
+    display: none;
+    background-color: white;
+    padding: 20px;
+    position: absolute;
+    top: 50px;
+    right: 20px;
+    width: 320px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 16px;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#menu-toggle:checked + .menu {
+    display: block;
+}
+
+.close-btn {
+    display: block;
+    text-align: right;
+    font-size: 1.8rem;
+    padding: 5px;
+}
+.close-btn:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+.menu li {
+    padding: 12px 0;
+    border-bottom: 1px solid #ddd;
+    font-size: 1rem;
+}
+.menu li:last-child {
+    border: none;
+}
+.menu a:hover {
+    color: var(--color-dirty-green);
+    padding-left: 10px;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+#how-i-can{
+    font-weight: 400;
+    text-align: center;
+}
+
+.highlight{
+    background-color: rgba(74, 197, 142, 0.2); 
+    border: 2px solid var(--color-green); 
+    transition: 0.5s ease; 
+    opacity: 0.8;
+    padding: 10px;
+}
+
+.highlight.fade-out {
+    opacity: 0; 
+}
